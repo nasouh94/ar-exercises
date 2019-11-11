@@ -9,4 +9,15 @@ require_relative './exercise_6'
 puts "Exercise 7"
 puts "----------"
 
-# Your code goes here ...
+
+print "Enter your store name..."
+user_input = gets.chomp
+
+@new_store = Store.create(name: user_input)
+
+if @new_store.errors
+  puts @new_store.errors.full_messages
+end
+
+
+
